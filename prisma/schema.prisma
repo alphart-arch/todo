@@ -15,3 +15,5 @@ model Todo {
   text String
   done Boolean
 }
+// env:
+  //  DATABASE_URL: postgres://postgres:postgres@localhost/todos*/
