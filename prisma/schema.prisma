@@ -1,7 +1,7 @@
 // Learn more about this file in the docs: https://pris.ly/d/prisma-schema
 datasource db {
   provider = "postgresql"
-  url = "postgresql://postgres:postgres@localhost/todos"
+  url = "postgres://gitpod@localhost/todos"
 }
 
 generator client {
