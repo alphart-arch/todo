@@ -1,5 +1,5 @@
 {
-  "name": "full-stack-web-development",
+  "name": "todo",
   "version": "0.0.1",
   "scripts": {
     "predev": "prisma migrate dev",

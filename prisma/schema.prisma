@@ -2,6 +2,7 @@
 datasource db {
   provider = "postgresql"
   url = "postgresql://postgres:postgres@192.168.1.111/todos"
+  
 }
 
 generator client {
@@ -17,3 +18,4 @@ model Todo {
 }
 // env:
   //  DATABASE_URL: postgres://postgres:postgres@localhost/todos*/
+  //shadowDatabaseUrl ="postgres://postgres:postgres@192.168.1.111/todos"
