@@ -24,7 +24,7 @@
 
   export let todos: Todo[];
 
-  const title = "QT-TODO-LIST";
+  const title = "TRIAL-QT-TODO-LIST";
 
   const processNewTodoResult = async (res: Response, form: HTMLFormElement) => {
     const newTodo = await res.json();
