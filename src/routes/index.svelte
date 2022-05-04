@@ -23,6 +23,7 @@
   import TodoItem from "$lib/todo-item.svelte";
 
   export let todos: Todo[];
+  //const date=new Date().toLocaleString();
 
   const title = "TRIAL-QT-TODO-LIST";
 
@@ -48,6 +49,17 @@
     max-width: 42rem;
     margin: 4rem auto 0 auto;
   }
+  /*.date{
+    margin: 0 0 0.5rem 0;
+    font-size: 28px;
+    width: 100%;
+    padding: 0.5em 1em 0.3em 1em;
+    box-sizing: border-box;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 8px;
+		text-align: center;
+  }
+  */
 
   .new {
     margin: 0 0 0.5rem 0;
@@ -77,17 +89,17 @@
 <svelte:head>
   <title>{title}</title>
 </svelte:head>
-
 <div class="todos">
   <h1>{title}</h1>
+  <!--<input type="text" name="date" aria-label="Present date" class="date" value={date}/>-->
 
-  <form action="/todos.json" method="post" class="new" use:enhance={{
+    <form action="/todos.json" method="post" class="new" use:enhance={{
     result: processNewTodoResult
   }}>
     <input type="text" name="text" aria-label="Add a todo" placeholder="+ type to add a todo" />
   </form>
   
-  {#each todos as todo}
+  {#each todos as  todo}
     <TodoItem
       {todo}
       processDeletedTodoResult={() => {
