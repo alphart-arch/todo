@@ -98,7 +98,7 @@
   <form action="/todos/{todo.uid}.json?_method=patch" method="post" class="text" use:enhance={{
     result: processUpdatedTodoResult
   }}>
-    <input type="text" name="text" value="{todo.text},{todo.created_at}" />
+    <input type="text" name="text" value="{todo.text}" />
     <button aria-label="Save todo" class="save"></button>
   </form>
   
