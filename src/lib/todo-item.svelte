@@ -1,9 +1,10 @@
 <script lang="ts">
   import { enhance } from "$lib/actions/form";
-
   export let todo: Todo;
+  //export let yes;
   export let processDeletedTodoResult: (res: Response) => void;
   export let processUpdatedTodoResult: (res: Response) => void;
+
 </script>
 
 <style>
@@ -86,7 +87,6 @@
     background-image: url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.5 1.5L7.4375 14.5L1.5 8.5909' stroke='%23676778' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
 </style>
-
 <div class="todo" class:done={todo.done}>
   <form action="/todos/{todo.uid}.json?_method=patch" method="post" use:enhance={{
     result: processUpdatedTodoResult
@@ -108,3 +108,7 @@
     <button aria-label="Delete todo" class="delete"></button>
   </form>
 </div>
+
+
+
+

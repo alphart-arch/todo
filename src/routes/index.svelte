@@ -21,17 +21,20 @@
 
 <script lang="ts">
   import TodoItem from "$lib/todo-item.svelte";
-
+  
   export let todos: Todo[];
   //const date=new Date().toLocaleString();
 
   const title = "TRIAL-QT-TODO-LIST";
-
+  let Show="Show Done";
+let yes=false;
+let i=0;
   const processNewTodoResult = async (res: Response, form: HTMLFormElement) => {
     const newTodo = await res.json();
-    todos = [...todos, newTodo];
+    alert('CAlled');
+    todos = [...todos, newTodo, newTodo];
 
-    form.reset();
+    //form.reset();
   };
 
   const processUpdatedTodoResult = async (res: Response) => {
@@ -41,6 +44,10 @@
       return t;
     })
   };
+
+  function callAlert(msg) {
+alert(msg);
+  }
 </script>
 
 <style>
@@ -97,15 +104,27 @@
     result: processNewTodoResult
   }}>
     <input type="text" name="text" aria-label="Add a todo" placeholder="+ type to add a todo" />
+    
   </form>
   
+  
+  <label class="todo">
+    <input type="checkbox" bind:checked={yes}>{Show}</label>
+    
   {#each todos as  todo}
+  {#if yes == true || (yes == false && todo.done == false)}
     <TodoItem
       {todo}
       processDeletedTodoResult={() => {
         todos = todos.filter(t => t.uid !== todo.uid);
       }}
       {processUpdatedTodoResult}
-    />
+      
+       />
+       <!--{i = i+1}
+       <div> Called {i}</div>-->
+       { /if}
   {/each}
+  
+
 </div>
