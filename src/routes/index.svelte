@@ -31,10 +31,10 @@ let yes=false;
 let i=0;
   const processNewTodoResult = async (res: Response, form: HTMLFormElement) => {
     const newTodo = await res.json();
-    alert('CAlled');
+    //alert('CAlled');
     todos = [...todos, newTodo, newTodo];
 
-    //form.reset();
+    form.reset();
   };
 
   const processUpdatedTodoResult = async (res: Response) => {
