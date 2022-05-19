@@ -28,7 +28,6 @@
   const title = "TRIAL-QT-TODO-LIST";
   let Show="Show Done";
 let yes=false;
-let i=0;
   const processNewTodoResult = async (res: Response, form: HTMLFormElement) => {
     const newTodo = await res.json();
     //alert('CAlled');
