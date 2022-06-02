@@ -25,7 +25,7 @@
   export let todos: Todo[];
   //const date=new Date().toLocaleString();
 
-  const title = "TRIAL-QT-TODO-LIST";
+  const title = "Alphart QT";
   let Show="Show Done";
 let yes=false;
   const processNewTodoResult = async (res: Response, form: HTMLFormElement) => {
