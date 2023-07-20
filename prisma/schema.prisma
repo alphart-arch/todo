@@ -2,7 +2,7 @@
 datasource db {
   provider = "postgresql"
   url = "postgresql://postgres:snlMeScIDts04d6z76af@containers-us-west-47.railway.app:6629/railway"
- // url = "postgresql://postgres:a1s2%d3f4g5H@192.168.1.111:5432/todos"
+ 
   //postgresql://postgres:snlMeScIDts04d6z76af@containers-us-west-47.railway.app:6629/railway
 }
 
